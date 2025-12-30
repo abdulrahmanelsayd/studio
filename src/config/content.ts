@@ -18,7 +18,7 @@ export const portfolio = {
     },
     about: {
         tagline: "Ready to build the future?",
-        bio: "Principal Full Stack Engineer. I help high-growth companies build scalable, user-centric platforms.\nNo barriers. No limits. Pure creation.",
+        bio: "I help high-growth companies build scalable, user-centric platforms.\nNo barriers. No limits. Pure creation.",
         features: [
             {
                 icon: Terminal,
@@ -49,6 +49,7 @@ export const portfolio = {
             outcome: "40% Conversion Lift",
             year: "2024",
             description: "A headless commerce solution built for scalability and performance.",
+            techs: ["Next.js", "Shopify Headless", "Redis", "Tailwind"],
             image: project1Image,
             link: "#"
         },
@@ -58,6 +59,7 @@ export const portfolio = {
             outcome: "2.5x Workflow Speed",
             year: "2024",
             description: "Integrated Al-driven workflows for content generation teams.",
+            techs: ["React", "Python", "TensorFlow", "FastAPI"],
             image: project2Image,
             link: "#"
         },
@@ -67,6 +69,7 @@ export const portfolio = {
             outcome: "$1.2M Assets Managed",
             year: "2023",
             description: "Real-time dashboarding for complex financial datasets.",
+            techs: ["Vue.js", "D3.js", "Node.js", "WebSockets"],
             image: project3Image,
             link: "#"
         },
@@ -76,6 +79,7 @@ export const portfolio = {
             outcome: "99.99% Uptime",
             year: "2023",
             description: "Distributed logistics network tracking for international shipping.",
+            techs: ["Go", "Kubernetes", "gRPC", "PostgreSQL"],
             image: project1Image, // Reuse for demo
             link: "#"
         },
@@ -85,6 +89,7 @@ export const portfolio = {
             outcome: "HIPAA Compliant",
             year: "2022",
             description: "Patient management system with end-to-end encryption.",
+            techs: ["React Native", "Firebase", "TypeScript", "Redux"],
             image: project2Image, // Reuse for demo
             link: "#"
         }

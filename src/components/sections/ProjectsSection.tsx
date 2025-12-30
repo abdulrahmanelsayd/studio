@@ -43,9 +43,20 @@ const ProjectsSection = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-medium text-white mb-1 sm:mb-2 group-hover:text-zinc-300 transition-colors duration-300 truncate">
                     {project.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-light line-clamp-2">
+                  <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-light line-clamp-2 mb-3 sm:mb-4">
                     {project.description}
                   </p>
+
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {project.techs?.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-white/5 hover:bg-white/10 border border-white/5 text-[9px] sm:text-[10px] font-medium uppercase tracking-wider text-white/60 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <div className="text-right flex-shrink-0">
                   <span className="block text-[10px] sm:text-xs font-medium text-white/40 uppercase tracking-wider mb-0.5 sm:mb-1">
