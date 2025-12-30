@@ -41,6 +41,11 @@
     @apply border-border;
   }
 
+  /* Prevent iOS zoom on inputs */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }

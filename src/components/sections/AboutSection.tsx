@@ -10,15 +10,15 @@ const AboutSection = () => {
         <div className="relative z-10">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-24">
-            <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.25em] sm:tracking-[0.3em] text-zinc-400 mb-4 sm:mb-6">
+            <p className="text-xs sm:text-sm font-medium uppercase tracking-[0.25em] sm:tracking-[0.3em] text-zinc-400 mb-4 sm:mb-6">
               About
             </p>
 
-            <h2 className="font-display text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[-0.02em] text-zinc-950 leading-[1.15] mb-5 sm:mb-6 md:mb-8">
+            <h2 className="font-display text-4xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[-0.02em] text-zinc-950 leading-[1.15] mb-5 sm:mb-6 md:mb-8">
               {about.tagline}
             </h2>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-500 leading-relaxed max-w-2xl mx-auto whitespace-pre-line px-2">
+            <p className="text-base sm:text-base md:text-lg lg:text-xl text-zinc-500 leading-relaxed max-w-2xl mx-auto whitespace-pre-line px-2">
               {about.bio}
             </p>
           </div>
@@ -45,7 +45,7 @@ const AboutSection = () => {
                   {feature.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1.5 rounded-full bg-white border border-zinc-200/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] text-[11px] sm:text-xs font-semibold text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-[0_4px_12px_rgba(0,0,0,0.04)] transition-all duration-300 cursor-default"
+                      className="px-3 py-1.5 rounded-full bg-white border border-zinc-200/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] text-xs sm:text-sm font-semibold text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-[0_4px_12px_rgba(0,0,0,0.04)] transition-all duration-300 cursor-default"
                     >
                       {skill}
                     </span>

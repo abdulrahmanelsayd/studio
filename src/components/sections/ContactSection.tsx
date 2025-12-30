@@ -24,7 +24,7 @@ const ContactSection = () => {
                     </h2>
                 </div>
 
-                <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 sm:gap-6 w-full max-w-5xl mx-auto px-2">
+                <div className="flex flex-col flex-wrap lg:flex-nowrap items-center justify-center gap-4 sm:gap-6 w-full max-w-5xl mx-auto px-2">
                     {/* Email Link */}
                     <a
                         href={`mailto:${contact.email}`}

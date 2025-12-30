@@ -9,14 +9,14 @@ const ProjectsSection = () => {
       <div className="max-w-[1400px] mx-auto">
         <div className="mb-8 sm:mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-8 border-b border-white/10 pb-6 sm:pb-10 md:pb-12">
           <div>
-            <span className="text-[10px] sm:text-xs md:text-sm font-medium text-white/60 tracking-wider uppercase">Selected Works</span>
-            <h2 className="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 sm:mt-3 md:mt-4 tracking-[-0.03em] text-white">
+            <span className="text-xs sm:text-xs md:text-sm font-medium text-white/60 tracking-wider uppercase">Selected Works</span>
+            <h2 className="font-display text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 sm:mt-3 md:mt-4 tracking-[-0.03em] text-white">
               Featured Projects
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 md:gap-x-8 md:gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <a
               key={index}
@@ -40,10 +40,10 @@ const ProjectsSection = () => {
 
               <div className="flex items-start justify-between gap-3 sm:gap-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-base sm:text-lg md:text-xl font-medium text-white mb-1 sm:mb-2 group-hover:text-zinc-300 transition-colors duration-300 truncate">
+                  <h3 className="text-lg sm:text-lg md:text-xl font-medium text-white mb-1 sm:mb-2 group-hover:text-zinc-300 transition-colors duration-300 truncate">
                     {project.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-light line-clamp-2 mb-3 sm:mb-4">
+                  <p className="text-sm sm:text-sm text-white/50 leading-relaxed font-light line-clamp-2 mb-3 sm:mb-4">
                     {project.description}
                   </p>
 
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
                     {project.techs?.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-white/5 hover:bg-white/10 border border-white/5 text-[9px] sm:text-[10px] font-medium uppercase tracking-wider text-white/60 transition-colors"
+                        className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-white/5 hover:bg-white/10 border border-white/5 text-[10px] sm:text-[10px] font-medium uppercase tracking-wider text-white/60 transition-colors"
                       >
                         {tech}
                       </span>
@@ -59,10 +59,10 @@ const ProjectsSection = () => {
                   </div>
                 </div>
                 <div className="text-right flex-shrink-0">
-                  <span className="block text-[10px] sm:text-xs font-medium text-white/40 uppercase tracking-wider mb-0.5 sm:mb-1">
+                  <span className="block text-xs sm:text-xs font-medium text-white/40 uppercase tracking-wider mb-0.5 sm:mb-1">
                     {project.category}
                   </span>
-                  <span className="block text-[10px] sm:text-xs text-white/30 font-mono">
+                  <span className="block text-xs sm:text-xs text-white/30 font-mono">
                     {project.year}
                   </span>
                 </div>
