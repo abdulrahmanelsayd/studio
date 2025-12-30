@@ -1,71 +1,117 @@
-import ArrowUpRight from "lucide-react/dist/esm/icons/arrow-up-right";
 import Mail from "lucide-react/dist/esm/icons/mail";
 import Github from "lucide-react/dist/esm/icons/github";
 import Linkedin from "lucide-react/dist/esm/icons/linkedin";
-import Twitter from "lucide-react/dist/esm/icons/twitter";
+import ArrowUpRight from "lucide-react/dist/esm/icons/arrow-up-right";
 import { portfolio } from "@/config/content";
-
-const iconMap: Record<string, any> = {
-    github: Github,
-    linkedin: Linkedin,
-    twitter: Twitter
-};
 
 const ContactSection = () => {
     const { contact } = portfolio;
 
     return (
-        <section id="contact" className="py-12 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-zinc-950">
-            <div className="max-w-[1400px] mx-auto">
-                <div className="mb-8 sm:mb-10 md:mb-12 text-center">
-                    <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] block mb-4 sm:mb-6">Ready for Impact</span>
-                    <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[6.5rem] font-black tracking-tighter text-white leading-none uppercase">
-                        Let's Go & Cook.
-                    </h2>
-                </div>
+        <section
+            id="contact"
+            className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 md:py-32 bg-black overflow-hidden"
+        >
+            {/* Subtle Background Gradients */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px]" />
+                <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px]" />
+            </div>
 
-                <div className="flex flex-col flex-wrap lg:flex-nowrap items-center justify-center gap-4 sm:gap-6 w-full max-w-5xl mx-auto px-2">
-                    {/* Email Link */}
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto w-full">
+                {/* Headline */}
+                <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center mb-4 tracking-tight leading-none">
+                    <span className="bg-gradient-to-br from-white via-white to-zinc-400 bg-clip-text text-transparent">
+                        Let's Create Together
+                    </span>
+                </h2>
+
+                {/* Subheading */}
+                <p className="text-base sm:text-lg md:text-xl text-zinc-400 text-center max-w-2xl mx-auto mb-16 md:mb-20">
+                    Have a project in mind? Let's discuss how we can work together to bring your vision to life.
+                </p>
+
+                {/* Contact Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+                    {/* Email Card */}
                     <a
                         href={`mailto:${contact.email}`}
-                        className="group relative w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 bg-zinc-900/50 hover:bg-zinc-900 rounded-full flex items-center gap-4 sm:gap-5 transition-all duration-500 hover:scale-[1.02] border border-white/5 hover:border-white/10 overflow-hidden"
+                        className="group relative bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 md:p-7 lg:p-8 hover:bg-zinc-900/70 hover:border-zinc-700/50 active:scale-[0.98] transition-all duration-300 overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                        <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-colors duration-500 flex-shrink-0 relative z-10">
-                            <Mail className="w-5 h-5" strokeWidth={1.5} />
-                        </div>
-
-                        <div className="flex flex-col items-start flex-1 min-w-0 relative z-10">
-                            <span className="text-white text-sm sm:text-base font-medium tracking-tight truncate max-w-full">{contact.email}</span>
-                            <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">Start a Project</span>
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-transparent to-blue-500/0 group-hover:from-purple-500/5 group-hover:to-blue-500/5 transition-all duration-500" />
+                        <div className="relative">
+                            <div className="w-12 h-12 mb-5 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center border border-zinc-700/50 group-hover:scale-110 group-hover:border-zinc-600 transition-all duration-300">
+                                <Mail className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors duration-300" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-white mb-2">
+                                Email
+                            </h3>
+                            <p className="text-sm text-zinc-500 mb-4">
+                                Drop me a message
+                            </p>
+                            <p className="text-sm font-mono text-zinc-400 group-hover:text-zinc-300 transition-colors break-all">
+                                {contact.email}
+                            </p>
+                            <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                                <ArrowUpRight className="w-4 h-4 text-zinc-400" />
+                            </div>
                         </div>
                     </a>
 
-                    {/* Social Links */}
-                    {Object.entries(contact.socials).map(([platform, url]) => {
-                        const Icon = iconMap[platform] || ArrowUpRight;
-                        return (
-                            <a
-                                key={platform}
-                                href={url as string}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 bg-zinc-900/50 hover:bg-zinc-900 rounded-full flex items-center gap-4 sm:gap-5 transition-all duration-500 hover:scale-[1.02] border border-white/5 hover:border-white/10 overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* GitHub Card */}
+                    <a
+                        href={contact.socials.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 md:p-7 lg:p-8 hover:bg-zinc-900/70 hover:border-zinc-700/50 active:scale-[0.98] transition-all duration-300 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 transition-all duration-500" />
+                        <div className="relative">
+                            <div className="w-12 h-12 mb-5 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center border border-zinc-700/50 group-hover:scale-110 group-hover:border-zinc-600 transition-all duration-300">
+                                <Github className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors duration-300" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-white mb-2">
+                                GitHub
+                            </h3>
+                            <p className="text-sm text-zinc-500 mb-4">
+                                Check out my work
+                            </p>
+                            <p className="text-sm font-mono text-zinc-400 group-hover:text-zinc-300 transition-colors break-all">
+                                github.com/username
+                            </p>
+                            <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                                <ArrowUpRight className="w-4 h-4 text-zinc-400" />
+                            </div>
+                        </div>
+                    </a>
 
-                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-colors duration-500 flex-shrink-0 relative z-10">
-                                    <Icon className="w-5 h-5" strokeWidth={1.5} />
-                                </div>
-
-                                <div className="flex flex-col items-start flex-1 relative z-10">
-                                    <span className="text-white text-sm sm:text-base font-medium tracking-tight capitalize">{platform}</span>
-                                    <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">Follow</span>
-                                </div>
-                            </a>
-                        );
-                    })}
+                    {/* LinkedIn Card */}
+                    <a
+                        href={contact.socials.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 md:p-7 lg:p-8 hover:bg-zinc-900/70 hover:border-zinc-700/50 active:scale-[0.98] transition-all duration-300 overflow-hidden"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-purple-500/0 group-hover:from-cyan-500/5 group-hover:to-purple-500/5 transition-all duration-500" />
+                        <div className="relative">
+                            <div className="w-12 h-12 mb-5 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center border border-zinc-700/50 group-hover:scale-110 group-hover:border-zinc-600 transition-all duration-300">
+                                <Linkedin className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors duration-300" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-white mb-2">
+                                LinkedIn
+                            </h3>
+                            <p className="text-sm text-zinc-500 mb-4">
+                                Let's connect
+                            </p>
+                            <p className="text-sm font-mono text-zinc-400 group-hover:text-zinc-300 transition-colors break-all">
+                                linkedin.com/in/profile
+                            </p>
+                            <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0 translate-x-2">
+                                <ArrowUpRight className="w-4 h-4 text-zinc-400" />
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

@@ -38,12 +38,7 @@ const Navigation = () => {
                     : "bg-transparent py-4 sm:py-6 md:py-8"
                     }`}
             >
-                <nav className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between h-full">
-                    {/* Logo */}
-                    <a href="/" className={`font-display font-bold text-2xl tracking-tighter z-50 relative transition-colors duration-500 ${scrolled ? "text-zinc-950" : "text-white"}`}>
-                        ONYX
-                    </a>
-
+                <nav className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-center h-full">
                     {/* Desktop Links - Ultra Premium */}
                     <div className="hidden md:flex items-center gap-10 lg:gap-16">
                         {navItems.map((item, index) => (
@@ -62,10 +57,10 @@ const Navigation = () => {
                     {/* Mobile Toggle */}
                     <button
                         onClick={() => setMobileOpen(true)}
-                        className={`md:hidden p-2 -mr-2 transition-colors duration-300 z-50 relative ${scrolled ? "text-zinc-950 hover:text-zinc-600" : "text-white hover:text-white/80"}`}
+                        className={`md:hidden p-2 text-zinc-950 hover:text-zinc-600 transition-colors duration-300 ${scrolled ? "text-zinc-950 hover:text-zinc-600" : "text-white hover:text-white/80"}`}
                         aria-label="Open menu"
                     >
-                        <Menu className="w-6 h-6" strokeWidth={1.5} />
+                        <Menu className="w-5 h-5" strokeWidth={1.5} />
                     </button>
                 </nav>
             </header>

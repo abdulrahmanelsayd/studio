@@ -1,43 +1,45 @@
-import ArrowUpRight from "lucide-react/dist/esm/icons/arrow-up-right";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
 import { portfolio } from "@/config/content";
 
 const HeroSection = () => {
     const { hero } = portfolio;
 
     return (
-        <section className="px-2 sm:px-4 md:px-6 py-20 sm:py-4 bg-zinc-950 min-h-screen flex flex-col items-center justify-center">
-            {/* The Creamy Rounded Card */}
-            <div className="w-full max-w-[1400px] bg-[#F9F6EE] rounded-[1.5rem] sm:rounded-[3rem] md:rounded-[4rem] lg:rounded-[6rem] relative overflow-hidden flex flex-col items-center justify-center text-center px-4 py-12 sm:p-8 md:p-16 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] animate-fade-in min-h-[60vh] sm:min-h-0">
+        <section className="relative w-full min-h-[100svh] flex items-center justify-center py-8 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12 bg-black overflow-hidden">
+            {/* Content Card */}
+            <div className="w-[92%] sm:w-[85%] md:max-w-3xl lg:max-w-4xl xl:max-w-5xl rounded-2xl md:rounded-3xl lg:rounded-[2rem] p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 relative overflow-hidden bg-gradient-to-br from-zinc-900/95 to-zinc-950/95 backdrop-blur-2xl border border-zinc-800/50 shadow-2xl shadow-black/50 flex flex-col items-center justify-center text-center">
 
+                {/* Background Effects (Gradient Orbs) */}
+                <div className="absolute top-0 left-0 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-purple-600/20 blur-3xl rounded-full mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+                <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-blue-600/20 blur-3xl rounded-full mix-blend-screen pointer-events-none translate-x-1/2 translate-y-1/2" />
+
+                {/* Content Container */}
                 <div className="relative z-10 w-full flex flex-col items-center">
-                    <h1 className="font-display text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-[-0.02em] text-zinc-950 leading-[1.05] mb-6 sm:mb-8 md:mb-10 lg:mb-12 mx-auto animate-slide-up">
+                    <h1 className="font-display text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white mb-3 sm:mb-4 md:mb-6 animate-slide-up">
                         {hero.headline}
                     </h1>
 
-                    <p className="max-w-xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-500 font-medium tracking-tight leading-relaxed mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-2 opacity-80 animate-slide-up animation-delay-100">
+                    <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-zinc-400 font-medium tracking-tight mt-4 sm:mt-5 md:mt-6 animate-slide-up animation-delay-100">
                         {hero.subtitle}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-5 w-full sm:w-auto px-4 sm:px-0 animate-slide-up animation-delay-200">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto mt-8 md:mt-10 lg:mt-12 animate-slide-up animation-delay-200">
                         <a
                             href={hero.actions.primary.href}
-                            className="group w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 rounded-full bg-zinc-950 text-white font-bold text-xs sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] flex items-center justify-center gap-2 sm:gap-3 shadow-[0_15px_30px_-8px_rgba(0,0,0,0.3)] md:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] transition-all hover:scale-105 hover:-translate-y-1 active:scale-[0.98]"
+                            className="group w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 rounded-full bg-white text-black font-semibold text-base flex items-center justify-center gap-2 shadow-lg shadow-white/10 hover:scale-105 active:scale-95 transition-all duration-300"
                         >
                             {hero.actions.primary.label}
-                            <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/40 group-hover:rotate-12 group-hover:text-white transition-all duration-300" />
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
 
                         <a
                             href={hero.actions.secondary.href}
-                            className="group w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 rounded-full bg-transparent border-2 border-zinc-950/10 text-zinc-950 font-bold text-xs sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] hover:border-zinc-950 transition-all flex items-center justify-center hover:scale-105 hover:-translate-y-1 active:scale-[0.98]"
+                            className="group w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 rounded-full bg-transparent border-2 border-white text-white font-semibold text-base flex items-center justify-center hover:bg-white/5 hover:scale-105 active:scale-95 transition-all duration-300"
                         >
                             {hero.actions.secondary.label}
                         </a>
                     </div>
                 </div>
-
-                {/* Subtle Bottom Light Reflection */}
-                <div className="absolute bottom-0 left-0 right-0 h-[15%] sm:h-[20%] bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
             </div>
         </section>
     );
