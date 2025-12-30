@@ -4,17 +4,17 @@ const AboutSection = () => {
   const { about } = portfolio;
 
   return (
-    <section id="about" className="px-3 sm:px-4 md:px-6 py-6 sm:py-8 bg-zinc-950">
-      <div className="w-full max-w-[1400px] mx-auto bg-[#F9F6EE] rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] lg:rounded-[6rem] relative overflow-hidden p-6 sm:p-10 md:p-16 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
+    <section id="about" className="px-2 sm:px-4 md:px-6 py-4 sm:py-8 bg-zinc-950">
+      <div className="w-full max-w-[1400px] mx-auto bg-[#F9F6EE] rounded-[1.5rem] sm:rounded-[3rem] md:rounded-[4rem] lg:rounded-[6rem] relative overflow-hidden p-6 sm:p-10 md:p-16 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="text-center mb-10 sm:mb-14 md:mb-20">
+          <div className="text-center mb-8 sm:mb-14 md:mb-20">
             <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.25em] sm:tracking-[0.3em] text-zinc-400 mb-4 sm:mb-6">
               About
             </p>
 
-            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[-0.02em] text-zinc-950 leading-[1.15] mb-5 sm:mb-6 md:mb-8">
+            <h2 className="font-display text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-[-0.02em] text-zinc-950 leading-[1.15] mb-5 sm:mb-6 md:mb-8">
               {about.tagline}
             </h2>
 

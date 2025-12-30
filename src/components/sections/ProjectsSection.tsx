@@ -5,18 +5,18 @@ const ProjectsSection = () => {
   const { projects } = portfolio;
 
   return (
-    <section id="work" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12">
+    <section id="work" className="py-12 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
-        <div className="mb-12 sm:mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-8 border-b border-white/10 pb-8 sm:pb-10 md:pb-12">
+        <div className="mb-8 sm:mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-8 border-b border-white/10 pb-6 sm:pb-10 md:pb-12">
           <div>
             <span className="text-[10px] sm:text-xs md:text-sm font-medium text-white/60 tracking-wider uppercase">Selected Works</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 sm:mt-3 md:mt-4 tracking-[-0.03em] text-white">
+            <h2 className="font-display text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 sm:mt-3 md:mt-4 tracking-[-0.03em] text-white">
               Featured Projects
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-x-8 md:gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 md:gap-x-8 md:gap-y-16">
           {projects.map((project, index) => (
             <a
               key={index}

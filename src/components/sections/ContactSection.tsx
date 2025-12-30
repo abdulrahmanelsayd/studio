@@ -15,11 +15,11 @@ const ContactSection = () => {
     const { contact } = portfolio;
 
     return (
-        <section id="contact" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-zinc-950">
+        <section id="contact" className="py-12 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-zinc-950">
             <div className="max-w-[1400px] mx-auto">
                 <div className="mb-8 sm:mb-10 md:mb-12 text-center">
                     <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] block mb-4 sm:mb-6">Ready for Impact</span>
-                    <h2 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[6.5rem] font-black tracking-tighter text-white leading-none uppercase">
+                    <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[6.5rem] font-black tracking-tighter text-white leading-none uppercase">
                         Let's Go & Cook.
                     </h2>
                 </div>
