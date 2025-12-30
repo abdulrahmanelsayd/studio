@@ -25,6 +25,9 @@ src/
 ### Core
 - **Framework**: React 18
 - **Language**: TypeScript
+- **Responsive Design**: Flawless experience across all devices (Mobile, Tablet, Desktop).
+- **Tech Stack Display**: Chic, glassmorphism-styled badges showcasing project technologies.
+- **Animations**: Powered by Framer Motion for smooth interactions.
 - **Build System**: Vite
 
 ### Styling & UI
