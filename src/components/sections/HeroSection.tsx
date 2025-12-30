@@ -7,7 +7,7 @@ const HeroSection = () => {
     return (
         <section className="px-2 sm:px-4 md:px-6 py-2 sm:py-4 bg-zinc-950 min-h-[100dvh] flex flex-col items-center justify-center">
             {/* The Creamy Rounded Card */}
-            <div className="w-full max-w-[1400px] bg-[#F9F6EE] rounded-[1.5rem] sm:rounded-[3rem] md:rounded-[4rem] lg:rounded-[6rem] relative overflow-hidden flex flex-col items-center justify-center text-center px-4 py-8 sm:p-8 md:p-16 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] animate-fade-in min-h-[85vh] sm:min-h-0">
+            <div className="w-full max-w-[1400px] bg-[#F9F6EE] rounded-[1.5rem] sm:rounded-[3rem] md:rounded-[4rem] lg:rounded-[6rem] relative overflow-hidden flex flex-col items-center justify-center text-center px-4 py-12 sm:p-8 md:p-16 lg:p-24 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] animate-fade-in sm:min-h-0">
 
                 <div className="relative z-10 w-full flex flex-col items-center">
                     <h1 className="font-display text-4xl sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5.5rem] font-bold tracking-[-0.02em] text-zinc-950 leading-[1.1] mb-4 sm:mb-6 md:mb-8 lg:mb-10 mx-auto animate-slide-up">

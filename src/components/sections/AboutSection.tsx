@@ -9,7 +9,7 @@ const AboutSection = () => {
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="text-center mb-8 sm:mb-14 md:mb-20">
+          <div className="text-center mb-12 sm:mb-16 md:mb-24">
             <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.25em] sm:tracking-[0.3em] text-zinc-400 mb-4 sm:mb-6">
               About
             </p>
@@ -23,32 +23,32 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Skills Grid - Clean & Minimal */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200/50 rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden">
+          {/* Skills Grid - Simple & Chic */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-8">
             {about.features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-[#F9F6EE] p-4 sm:p-6 md:p-8 lg:p-10 group hover:bg-zinc-950 transition-colors duration-500"
-              >
-                <div className="mb-3 sm:mb-4 md:mb-6">
-                  <feature.icon
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-950 group-hover:text-white transition-colors duration-500"
-                    strokeWidth={1.5}
-                  />
+              <div key={index} className="flex flex-col items-center sm:items-start group">
+                {/* Icon & Label */}
+                <div className="flex flex-col items-center sm:items-start mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-white border border-zinc-100 flex items-center justify-center mb-3 sm:mb-4 shadow-[0_2px_10px_rgba(0,0,0,0.03)] group-hover:scale-105 transition-transform duration-500">
+                    <feature.icon
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-900"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                  <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-zinc-900">
+                    {feature.label}
+                  </h3>
                 </div>
 
-                <h3 className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.1em] sm:tracking-[0.15em] text-zinc-950 group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3 md:mb-4">
-                  {feature.label}
-                </h3>
-
-                <div className="space-y-1 sm:space-y-2 hidden sm:block">
-                  {feature.skills.slice(0, 3).map((skill, i) => (
-                    <p
+                {/* Skills Tags - Chic & Rounded */}
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2">
+                  {feature.skills.map((skill, i) => (
+                    <span
                       key={i}
-                      className="text-[10px] sm:text-xs text-zinc-400 group-hover:text-zinc-400 transition-colors duration-500"
+                      className="px-3 py-1.5 rounded-full bg-white border border-zinc-200/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] text-[11px] sm:text-xs font-semibold text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 hover:shadow-[0_4px_12px_rgba(0,0,0,0.04)] transition-all duration-300 cursor-default"
                     >
                       {skill}
-                    </p>
+                    </span>
                   ))}
                 </div>
               </div>

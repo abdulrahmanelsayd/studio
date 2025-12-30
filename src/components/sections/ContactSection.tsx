@@ -24,18 +24,21 @@ const ContactSection = () => {
                     </h2>
                 </div>
 
-                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto px-2">
+                <div className="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap items-center justify-center gap-4 sm:gap-6 w-full max-w-5xl mx-auto px-2">
                     {/* Email Link */}
                     <a
                         href={`mailto:${contact.email}`}
-                        className="group w-full sm:w-auto px-5 sm:px-6 md:px-8 py-3.5 sm:py-4 md:py-5 bg-white rounded-full flex items-center gap-3 sm:gap-4 transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] shadow-[0_10px_25px_rgba(0,0,0,0.08)] md:shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-zinc-100/50"
+                        className="group relative w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 bg-zinc-900/50 hover:bg-zinc-900 rounded-full flex items-center gap-4 sm:gap-5 transition-all duration-500 hover:scale-[1.02] border border-white/5 hover:border-white/10 overflow-hidden"
                     >
-                        <div className="flex flex-col items-start flex-1 min-w-0">
-                            <span className="text-zinc-950 text-xs sm:text-sm font-bold tracking-tight truncate max-w-full">{contact.email}</span>
-                            <span className="text-zinc-400 text-[7px] sm:text-[8px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em]">Contact</span>
+                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-colors duration-500 flex-shrink-0 relative z-10">
+                            <Mail className="w-5 h-5" strokeWidth={1.5} />
                         </div>
-                        <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center group-hover:bg-zinc-950 group-hover:text-white transition-colors duration-500 flex-shrink-0 border border-zinc-100">
-                            <Mail className="w-4 h-4" strokeWidth={2} />
+
+                        <div className="flex flex-col items-start flex-1 min-w-0 relative z-10">
+                            <span className="text-white text-sm sm:text-base font-medium tracking-tight truncate max-w-full">{contact.email}</span>
+                            <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">Start a Project</span>
                         </div>
                     </a>
 
@@ -46,14 +49,19 @@ const ContactSection = () => {
                             <a
                                 key={platform}
                                 href={url as string}
-                                className="group w-full sm:w-auto px-5 sm:px-6 md:px-8 py-3.5 sm:py-4 md:py-5 bg-white rounded-full flex items-center gap-3 sm:gap-4 transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.05] shadow-[0_10px_25px_rgba(0,0,0,0.08)] md:shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-zinc-100/50"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 bg-zinc-900/50 hover:bg-zinc-900 rounded-full flex items-center gap-4 sm:gap-5 transition-all duration-500 hover:scale-[1.02] border border-white/5 hover:border-white/10 overflow-hidden"
                             >
-                                <div className="flex flex-col items-start flex-1">
-                                    <span className="text-zinc-950 text-xs sm:text-sm font-bold tracking-tight capitalize">{platform}</span>
-                                    <span className="text-zinc-400 text-[7px] sm:text-[8px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em]">Follow</span>
+                                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-colors duration-500 flex-shrink-0 relative z-10">
+                                    <Icon className="w-5 h-5" strokeWidth={1.5} />
                                 </div>
-                                <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center group-hover:bg-zinc-950 group-hover:text-white transition-colors duration-500 flex-shrink-0 border border-zinc-100">
-                                    <Icon className="w-4 h-4" strokeWidth={2} />
+
+                                <div className="flex flex-col items-start flex-1 relative z-10">
+                                    <span className="text-white text-sm sm:text-base font-medium tracking-tight capitalize">{platform}</span>
+                                    <span className="text-zinc-500 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">Follow</span>
                                 </div>
                             </a>
                         );
